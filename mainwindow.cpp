@@ -56,8 +56,8 @@ void MainWindow::on_pushButton_clicked(){
 
             }
         }
-    QString q1 = text_to_run + QStringLiteral(" & exit");
-    system(qPrintable(q1));
+    QString q1 = text_to_run;
+    QProcess::startDetached(q1);
 }
 void MainWindow::on_pushButton_clicked2(){
     QFile inFile;
@@ -84,6 +84,6 @@ void MainWindow::on_pushButton_clicked2(){
 
             }
         }
-    QString q1 = text_to_run + QStringLiteral(" & exit");
-    system(qPrintable(q1));
+    QString q1 = text_to_run;
+    QProcess::startDetached(q1);
 }
